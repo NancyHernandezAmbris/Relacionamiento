@@ -1,11 +1,11 @@
-# Hecho con gusto por Nancy Hern醤dez Ambris
+# Hecho con gusto por Nancy Hern谩ndez Ambris
 
-# Laboratorio - An醠isis de redes en R - Algebra matricial
+# Laboratorio - An谩lisis de redes en R - Algebra matricial
 
-# Objetivo: Explorar las funciones de algebra lineal con un caso hipot閠ico
+# Objetivo: Explorar las funciones de algebra lineal con un caso hipot茅tico
 # ------------------------------------------------------------------------------------------------------
 # En este ejercicio vamos a:
-# 1. Cargar nuestra matriz hipot閠ica de datos
+# 1. Cargar nuestra matriz hipot茅tica de datos
 # 2. Hacer diversas operaciones matriciales
 # 3. Comprender el algoritmo base de las recomendaciones de AMAZON
 
@@ -29,17 +29,17 @@ dim(M)
 # Es la estructura de red que AMAZON ocupa para hacer recomendaciones en base a tus compras actuales
  M[1:6,1]
 
-# Ver s髄o el vector de clientes que compran el producto "corbata" (producto de la columna 1)
+# Ver s贸lo el vector de clientes que compran el producto "corbata" (producto de la columna 1)
 
 M[1:6,1:2]
-#Ver s髄o un fragmento de la base original, en relaci髇 a los dos productos que me interesan
-#Puede ser 鷗il para explorar clientes y productos
+#Ver s贸lo un fragmento de la base original, en relaci贸n a los dos productos que me interesan
+#Puede ser 煤til para explorar clientes y productos
 
 rowSums (M)
 # Computar grado de centralidad
 
 t(M)
-# funci髇 鷗il para enfocarnos en productos y no s髄o en clientes
+# funci贸n 煤til para enfocarnos en productos y no s贸lo en clientes
 
 M + M
 # Suma de matrices
@@ -53,14 +53,14 @@ M * M
 
 M %*% t (M)
 
-#multiplicaci髇 de matrices checar tama駉s
-#checar tama駉 de la matriz -dim-
+#multiplicaci贸n de matrices checar tama帽os
+#checar tama帽o de la matriz -dim-
 
 
 t(M) %*% M
 
-#El algoritmo de recomendaci髇 de AMAZON, hace b醩icamente lo anterior.
-# para tener el n鷐ero de veces que 2 productos han sido comprados por el mismo cliente
+#El algoritmo de recomendaci贸n de AMAZON, hace b谩sicamente lo anterior.
+# para tener el n煤mero de veces que 2 productos han sido comprados por el mismo cliente
 #identificar productos que van frecuentemente juntos (co ocurrencias par)
 
 
@@ -71,7 +71,7 @@ P = t(M) %*% M
 
 diag  (P) = 0
 
-P#no es una matriz identidad (como en la correlaci髇) 
+P#no es una matriz identidad (como en la correlaci贸n) 
 
 C = M %*% t (M)
 
@@ -80,4 +80,4 @@ C
 
 
 diag (C) = 0
-C#no es una matriz identidad (como en la correlaci髇)
+C#no es una matriz identidad (como en la correlaci贸n)
